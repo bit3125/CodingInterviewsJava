@@ -34,7 +34,7 @@ public class Test59_2_Epoch2 {
 	public void push_back(int n){
 		indexCnt++;
 		Number newNum = new Number(indexCnt, n);
-		while(!maxQ.isEmpty() || maxQ.getLast().value<newNum.value)
+		while(!maxQ.isEmpty() && maxQ.getLast().value<newNum.value)
 			maxQ.removeLast();
 		maxQ.addLast(newNum);
 		dataQ.addLast(newNum);
